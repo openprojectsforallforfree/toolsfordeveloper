@@ -1,0 +1,27 @@
+﻿##filename=Delete.cshtml
+$$using Solution.PIS.Web.App_GlobalResources
+$$using Solution.PIS.Web.Helper
+$$model Solution.PIS.Web.Areas.MasterParameter.Models.@(Model.Name)Model
+
+$${
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>$$Resources.delete</h2>
+<hr />
+$$using (Html.BeginForm("Delete", "@(Model.Name)")) {
+    $$Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Update @(Model.Name)</legend>
+        $$Html.DisplayForModel()
+        <p>
+            <input type="submit" value="Update" />
+            $$Html.CancelButton()
+        </p>
+
+        $$Html.HiddenForHandlePostError()
+        $$Html.HiddenForKeyField()        
+    </fieldset>
+}

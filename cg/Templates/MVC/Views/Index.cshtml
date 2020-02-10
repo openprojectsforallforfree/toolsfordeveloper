@@ -1,0 +1,17 @@
+﻿##filename= Index.cshtml
+$$using MvcContrib.Pagination
+$$using MvcContrib.UI.Grid
+$$using MvcContrib.UI.Pager
+$$using Solution.PIS.Web.App_GlobalResources
+$$using Solution.PIS.Web.Areas.MasterParameter.Models
+$$using Solution.PIS.Web.Helper
+
+$${
+    ViewBag.Title = "@(Model.Name)";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<h2>$$Resources.@(Model.Name)</h2>
+<hr/>
+$$Html.Partial("List", ViewData["__List"])
+<br/>
+$$Html.CreateNewButton()

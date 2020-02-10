@@ -1,0 +1,111 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NMG.App", "NMG.App\NMG.App.csproj", "{63E6330D-8291-44DD-A032-B7FBF844AC5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NMG.Core", "NMG.Core\NMG.Core.csproj", "{A15F2280-C07B-4BBA-B822-6D06C464A582}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NMG.UI", "NMG.UI\NMG.UI.csproj", "{25085728-808D-4FA1-996C-1EF0605DEB1D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NGM.Console", "NGM.Console\NGM.Console.csproj", "{2B28DDF1-642C-4DAD-BF0A-523ED4853F76}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63E6330D-8291-44DD-A032-B7FBF844AC5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63E6330D-8291-44DD-A032-B7FBF844AC5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63E6330D-8291-44DD-A032-B7FBF844AC5D}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{63E6330D-8291-44DD-A032-B7FBF844AC5D}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{63E6330D-8291-44DD-A032-B7FBF844AC5D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{63E6330D-8291-44DD-A032-B7FBF844AC5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63E6330D-8291-44DD-A032-B7FBF844AC5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63E6330D-8291-44DD-A032-B7FBF844AC5D}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{63E6330D-8291-44DD-A032-B7FBF844AC5D}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{63E6330D-8291-44DD-A032-B7FBF844AC5D}.Release|x86.ActiveCfg = Release|Any CPU
+		{A15F2280-C07B-4BBA-B822-6D06C464A582}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A15F2280-C07B-4BBA-B822-6D06C464A582}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A15F2280-C07B-4BBA-B822-6D06C464A582}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{A15F2280-C07B-4BBA-B822-6D06C464A582}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{A15F2280-C07B-4BBA-B822-6D06C464A582}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{A15F2280-C07B-4BBA-B822-6D06C464A582}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A15F2280-C07B-4BBA-B822-6D06C464A582}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A15F2280-C07B-4BBA-B822-6D06C464A582}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{A15F2280-C07B-4BBA-B822-6D06C464A582}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{A15F2280-C07B-4BBA-B822-6D06C464A582}.Release|x86.ActiveCfg = Release|Any CPU
+		{25085728-808D-4FA1-996C-1EF0605DEB1D}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{25085728-808D-4FA1-996C-1EF0605DEB1D}.Debug|Any CPU.Build.0 = Debug|x86
+		{25085728-808D-4FA1-996C-1EF0605DEB1D}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{25085728-808D-4FA1-996C-1EF0605DEB1D}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{25085728-808D-4FA1-996C-1EF0605DEB1D}.Debug|x86.ActiveCfg = Debug|x86
+		{25085728-808D-4FA1-996C-1EF0605DEB1D}.Debug|x86.Build.0 = Debug|x86
+		{25085728-808D-4FA1-996C-1EF0605DEB1D}.Release|Any CPU.ActiveCfg = Release|x86
+		{25085728-808D-4FA1-996C-1EF0605DEB1D}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{25085728-808D-4FA1-996C-1EF0605DEB1D}.Release|Mixed Platforms.Build.0 = Release|x86
+		{25085728-808D-4FA1-996C-1EF0605DEB1D}.Release|x86.ActiveCfg = Release|x86
+		{25085728-808D-4FA1-996C-1EF0605DEB1D}.Release|x86.Build.0 = Release|x86
+		{2B28DDF1-642C-4DAD-BF0A-523ED4853F76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2B28DDF1-642C-4DAD-BF0A-523ED4853F76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2B28DDF1-642C-4DAD-BF0A-523ED4853F76}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{2B28DDF1-642C-4DAD-BF0A-523ED4853F76}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{2B28DDF1-642C-4DAD-BF0A-523ED4853F76}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2B28DDF1-642C-4DAD-BF0A-523ED4853F76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2B28DDF1-642C-4DAD-BF0A-523ED4853F76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2B28DDF1-642C-4DAD-BF0A-523ED4853F76}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{2B28DDF1-642C-4DAD-BF0A-523ED4853F76}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{2B28DDF1-642C-4DAD-BF0A-523ED4853F76}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = NMG.App\NMG.App.csproj
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$1.ResourceNamePolicy = MSBuild
+		$0.TextStylePolicy = $4
+		$2.FileWidth = 120
+		$2.EolMarker = Windows
+		$2.inheritsSet = VisualStudio
+		$2.inheritsScope = text/plain
+		$2.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $3
+		$3.IndentSwitchBody = True
+		$3.AnonymousMethodBraceStyle = NextLine
+		$3.PropertyBraceStyle = NextLine
+		$3.PropertyGetBraceStyle = NextLine
+		$3.PropertySetBraceStyle = NextLine
+		$3.EventBraceStyle = NextLine
+		$3.EventAddBraceStyle = NextLine
+		$3.EventRemoveBraceStyle = NextLine
+		$3.StatementBraceStyle = NextLine
+		$3.PlaceElseOnNewLine = True
+		$3.PlaceCatchOnNewLine = True
+		$3.PlaceFinallyOnNewLine = True
+		$3.BeforeMethodDeclarationParentheses = False
+		$3.BeforeMethodCallParentheses = False
+		$3.BeforeConstructorDeclarationParentheses = False
+		$3.BeforeIndexerDeclarationBracket = False
+		$3.NewParentheses = False
+		$3.BeforeTypeOfParentheses = True
+		$3.SpacesBeforeBrackets = False
+		$3.inheritsSet = Mono
+		$3.inheritsScope = text/x-csharp
+		$3.scope = text/x-csharp
+		$4.FileWidth = 120
+		$4.EolMarker = Windows
+		$4.inheritsSet = VisualStudio
+		$4.inheritsScope = text/plain
+		$4.scope = text/plain
+		$0.StandardHeader = $5
+		$5.Text = 
+		$5.IncludeInNewFiles = True
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,34 @@
+﻿##filename= @(Model.Name).hbm.xml
+<?xml version="1.0" encoding="utf-8" ?>
+<hibernate-mapping xmlns="urn:nhibernate-mapping-2.2" namespace="Solution.PIS.Domain.MasterParameter" assembly="Solution.PIS.Domain">
+
+  <class name="@Model.Name" table="@Model.Name">
+      @foreach (var v in Model.Columns)
+{
+    if (v.IsPrimaryKey)
+    {
+    @:<id name="@(v.Name)" column="@(v.Name)" type="int">
+           }
+}
+   
+
+      <generator class="native">
+        <param name="sequence">SEQ_@Model.Name</param>
+      </generator>
+    </id>
+      @foreach (var v in Model.Columns)
+{
+    string type = string.Empty;
+    string coltype = v.DataType;
+    if (coltype == "varchar")
+    {
+        type = "string";
+    }
+    else
+    {
+        type = "int";
+    } 
+    @:<property name="@(v.Name)" column="@(v.Name)" type="String" length="@(v.DataLength)" ></property>
+   }
+  </class>
+</hibernate-mapping>

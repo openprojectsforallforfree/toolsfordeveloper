@@ -1,0 +1,52 @@
+﻿11:14 PM 7/11/2014
+	No need of ##folder , its done in ##filename it self , just give the path eg view/index.htm
+	Also creates the folder if it does not exist!
+	backs up old if already exist
+12:17 PM 7/11/2014
+New UI Project
+===
+	Single XML Project file with both tables and Project
+	No need of vs folder structure
+	Only project tree and template tree
+
+
+Folder Creation
+===
+	In template we can give a new folder variable to create a folder . 
+	as ##folder= @(Model.Name)Controller.cs
+
+Flow
+===
+	First a blank tree
+	New>Load tables from old ui
+	Open>Loads xml
+	Read template structure
+	Save xml
+
+Project
+===
+	solution root path
+	template root path
+	project<list of tables with relative template paths>
+	tables<list of tables with columns> 
+	(Dest path is combination of solution root path and folder path in template #)
+	
+
+9:10 AM 7/11/2014
+Tempaltes
+===
+	Refresh templates
+	Templates subfolder
+	Template group pulling
+	Backup existing files
+
+Project
+===
+	Drag Table from project to root node copies the node.
+	Drag Table from Tables to existing node changes the node name only.
+		It will be used in combination with 1 to make new nodes
+
+Folder Creation
+===
+	In template we can give a new folder variable to create a folder .
+

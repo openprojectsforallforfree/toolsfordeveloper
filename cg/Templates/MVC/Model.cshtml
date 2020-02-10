@@ -1,0 +1,51 @@
+﻿##filename= @(Model.Name)Model.cs
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using Solution.PIS.Domain;
+using Solution.PIS.Domain.MasterParameter;
+using Solution.PIS.Web.App_GlobalResources;
+using Solution.PIS.Web.BootStrap.AutoMapper;
+using Solution.PIS.Web.DataAnnotationExtensions;
+using Solution.PIS.Web.Helper.DataAnnotation;
+
+namespace Solution.PIS.Web.Areas.MasterParameter.Models
+{
+    public class @(Model.Name)Model : IMapFrom<@(Model.Name)>, IHaveCustomMappings
+    {
+@foreach (var v in Model.Columns)
+{
+if (v.IsPrimaryKey)
+{
+ @:[ScaffoldColumn(false)]
+   @:     [KeyField]
+     @:   public int @(v.Name) { get; set; }
+}
+else
+    {
+string type = string.Empty;
+    string coltype = v.DataType;
+    if (coltype == "varchar")
+    {
+        type = "string";
+    }
+    else
+    {
+        type = "int";
+    }
+
+        
+        @:[Display(Name = "@(v.Name)", ResourceType = typeof(Resources))]   
+        @:public @(type) @(v.Name) { get; set; }
+        
+}
+}
+        public void CreateMappings(AutoMapper.IConfiguration configuration)
+        {
+           
+        }
+    }    
+}

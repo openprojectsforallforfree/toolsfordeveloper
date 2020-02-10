@@ -1,0 +1,23 @@
+﻿##filename= List.cshtml
+$$model IList<Solution.PIS.Web.Areas.MasterParameter.Models.@(Model.Name)Model>
+$$using System.Globalization
+$$using GridMvc.Html
+$$using Solution.PIS.Web.App_GlobalResources
+$$using Solution.PIS.Web.Areas.MasterParameter.Models
+$$using Solution.PIS.Web.Helper
+
+
+<div style="width:80%">
+    $$Html.Grid(Model).Columns(columns =>
+    {
+    @foreach (var v in Model.Columns)
+{
+      @:  columns.Add(c => c.@(v.Name)).Titled(Resources.@(v.Name)).Filterable(true);
+    }
+        
+        
+        columns.Add().Titled("").Sanitized(false).Encoded(false).RenderValueAs(c => $$Html.FormImageUpdateLink(Url.Action("Edit", "@(Model.Name)", new { id = c.@(Model.Name)Id})));
+        columns.Add().Titled("").Sanitized(false).Encoded(false).RenderValueAs(c => $$Html.FormImageDeleteLink(Url.Action("Delete", "@(Model.Name)", new { id = c.@(Model.Name)Id })));
+        
+    }).WithPaging(GridViewConfiguration.PageSize).Sortable(true)
+</div>

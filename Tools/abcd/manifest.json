@@ -1,0 +1,19 @@
+{
+  "manifest_version": 2,
+
+  "name": "Firebug Development Center",
+  "description": "",
+  "version": "1.0",
+  "browser_action": {
+        "default_popup": "popup.htm"
+    },
+  "background":{
+	"scripts":["background.js"],
+	"persistent": true
+  },
+  "content_scripts":[
+    {
+	"matches": ["https://vitpayroll/Employee/Timesheet/*", "https://vitpayroll/Employee/Timesheet/*"],
+        "js": ["content.js"]
+    }]
+}

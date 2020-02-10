@@ -1,0 +1,25 @@
+﻿<Application x:Class="TextJyawo.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:TextJyawo"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        
+
+        <Style TargetType="{x:Type TextBox}">
+            <Style.Triggers>
+                <Trigger Property="IsFocused" Value="True">
+                    <Setter Property="Background" Value="Snow" />
+                    <Setter Property="BorderThickness" Value="2" />
+                </Trigger>
+                <Trigger Property="IsFocused" Value="False">
+                    <Setter Property="Background" Value="White" />
+                    <Setter Property="BorderThickness" Value="1" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        
+    </Application.Resources>
+    
+    
+</Application>

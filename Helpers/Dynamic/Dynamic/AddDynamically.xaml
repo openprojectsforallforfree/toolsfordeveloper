@@ -1,0 +1,25 @@
+﻿<Window x:Class="Dynamic.AddDynamically"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Dynamic"
+        mc:Ignorable="d"
+        Title="AddDynamically" Height="300" Width="300">
+
+    <Window.Resources>
+       
+    </Window.Resources>
+    <Combobox.ItemTemplate>
+        <DataTemplate DataType="{x:Type local:SearchEntryViewmodel}">
+        <StackPanel Orientation="Horizontal">
+            <Combobox ItemsSource="{Binding MyPropertyInSearchEntryViewmodel}"/>
+            <!-- the other controls with bindings -->
+        </StackPanel>
+    </DataTemplate>
+    </Combobox.ItemTemplate>
+    <Grid>
+        
+        <ItemsControl ItemsSource="{Binding MySearchItems}"/>
+    </Grid>
+</Window>

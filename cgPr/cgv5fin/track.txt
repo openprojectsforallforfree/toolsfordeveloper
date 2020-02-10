@@ -1,0 +1,10 @@
+1:39 PM 8/11/2010 Finished multi select
+9:00 AM 8/13/2010 Finalysed
+7:12 PM 8/15/2010 Added lstTextBox and lst ComboBox
+7:12 PM 8/15/2010 Added folat
+7:41 AM 8/16/2010 set integer float validation parameter
+9:01 AM 8/18/2010 Form text is obtained form text area in table name row
+8:03 PM 8/18/2010 Added open folder and copy folder path
+12:45 PM 8/28/2010 Works with multiple selection now !
+2:09 PM 8/28/2010 select with left join with multiple selection done.
+2:09 PM 8/28/2010 listing form for view with mulitple tables done.

@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cg", "cg\cg.csproj", "{88F95FA2-E2FD-4BDD-9D4C-26F21CB5FEEC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ICg", "ICg\ICg.csproj", "{D4276BDE-5B37-4AE8-8C78-3D3024C939EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cg1", "Cg1\Cg1.csproj", "{12A93F84-D458-4541-9C5F-32256C289ECD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{88F95FA2-E2FD-4BDD-9D4C-26F21CB5FEEC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88F95FA2-E2FD-4BDD-9D4C-26F21CB5FEEC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88F95FA2-E2FD-4BDD-9D4C-26F21CB5FEEC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88F95FA2-E2FD-4BDD-9D4C-26F21CB5FEEC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4276BDE-5B37-4AE8-8C78-3D3024C939EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4276BDE-5B37-4AE8-8C78-3D3024C939EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4276BDE-5B37-4AE8-8C78-3D3024C939EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4276BDE-5B37-4AE8-8C78-3D3024C939EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12A93F84-D458-4541-9C5F-32256C289ECD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12A93F84-D458-4541-9C5F-32256C289ECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12A93F84-D458-4541-9C5F-32256C289ECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12A93F84-D458-4541-9C5F-32256C289ECD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

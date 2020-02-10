@@ -1,0 +1,20 @@
+﻿   "Razor says:@@ok Hello @Model.Name
+                    @foreach (var v in Model.Columns)
+                    {
+                    @v.Name
+                    }";
+
+
+					following key words are read and removed in final output
+					##filename =  (For File Name)
+
+					Use $$ instead of @ 
+
+					Razor help:
+					@(Model.Name)
+					@model.name@:to clear the razor (took almost a day to find:()
+
+					@foreach (var genre in Model)
+{
+@:aa @(genre.Name) bb //took me 5 hours to find this .. gives "aa Name bb" note @: and @(...)
+}

@@ -1,0 +1,42 @@
+﻿##filename= @(Model.Name).cs
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Solution.PIS.Domain.MasterParameter
+{
+    public class @(Model.Name) : IHaveSingleId
+    {
+                  @*  $$foreach (var v in Model.Columns)
+                    {
+                 $$:public int $$(v.Name)  { get; set; }
+                    }*@
+
+@foreach (var v in Model.Columns)
+{
+    string type = string.Empty;
+    string coltype = v.DataType;
+    if (coltype == "varchar")
+    {
+        type = "string";
+    }
+    else
+    {
+        type = "int";
+    }
+    @:public virtual @(type) @(v.Name)  { get; set; }
+    }
+
+@foreach (var v in Model.Columns)
+{
+    if (v.IsPrimaryKey)
+    {
+    @:  public virtual object Id
+    @:{
+    @:get { return @(v.Name); }
+    @:}
+        }
+}
+}
+}

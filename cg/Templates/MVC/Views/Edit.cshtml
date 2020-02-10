@@ -1,0 +1,28 @@
+﻿##filename= a\Edit.cshtml
+$$using Solution.PIS.Web.App_GlobalResources
+$$using Solution.PIS.Web.Helper
+$$model Solution.PIS.Web.Areas.MasterParameter.Models.@(Model.Name)Model
+
+$${
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>$$Resources.edit</h2>
+<hr/>
+$$using (Html.BeginForm("Edit", "@(Model.Name)")) {
+    $$Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Update @(Model.Name)</legend>
+        $$Html.EditorForModel()
+        <p>
+            <input type="submit" value="Update" />
+            $$Html.CancelButton()
+        </p>
+
+        $$Html.HiddenForHandlePostError()
+        $$Html.HiddenForKeyField()
+    </fieldset>
+}

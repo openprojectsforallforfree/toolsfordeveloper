@@ -1,0 +1,56 @@
+﻿<Window x:Class="TextJyawo.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TextJyawo"
+        mc:Ignorable="d"
+        Title="Replace texts" Height="350" Width="525">
+    <DockPanel LastChildFill="True">
+        <Grid DockPanel.Dock="Left" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="15*"/>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0"  >Find</Label>
+            <TextBox  Grid.Row="1" Margin="5 0 0 5" Name="txtFind" TextWrapping="Wrap" AcceptsReturn="True" KeyUp="txtFind_KeyUp"    />
+            <Label Grid.Row="2"  >Replace</Label>
+            <TextBox Name="txtReplace" Margin="5 0 0 5" Grid.Row="3" TextWrapping="Wrap" AcceptsReturn="True"  KeyUp="txtReplace_KeyUp"  />
+        </Grid>
+        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                </Grid.RowDefinitions>
+                <Label Grid.Column="0"   >Input</Label>
+                <StackPanel Grid.Column="1" Orientation="Horizontal"   HorizontalAlignment="Right">
+                    <Label VerticalAlignment="Center"   >Delemeter</Label>
+                    <TextBox IsTabStop="False" Name="txtDelimiter" Margin="5" Width="50" TextAlignment="Center"  FontFamily="Lucida Sans" >,</TextBox>
+                    <CheckBox IsTabStop="False" VerticalAlignment="Center" HorizontalAlignment="Left" Name="chkCopyToClipBoard" IsChecked="True">Copy</CheckBox>
+                </StackPanel>
+            </Grid>
+            <TextBox  Grid.Row="1" Margin="5 0 0 5" Name="txtInput" TextWrapping="Wrap"  AcceptsReturn="True" KeyUp="txtInput_KeyUp"     />
+            <Label Grid.Row="2"   >Output</Label>
+            <TextBox Name="txtOutput" Grid.Row="3" Margin="5 0 0 5"/>
+        </Grid>
+    </DockPanel>
+</Window>

@@ -1,0 +1,128 @@
+﻿##filename= @(Model.Name)Controller.cs
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web.Mvc;
+using AutoMapper;
+using NHibernate.Hql.Ast.ANTLR;
+using Solution.PIS.Domain;
+using Solution.PIS.Domain.Extensions;
+using Solution.PIS.Domain.MasterParameter;
+using Solution.PIS.NHibernate.ServiceLayer;
+using Solution.PIS.ServiceLayer.Search;
+using Solution.PIS.Web.Areas.MasterParameter.Models;
+using Solution.PIS.Web.Filters.ActionFilter;
+using Solution.PIS.Web.Helper;
+using Solution.PIS.Web.Helper.DataAnnotation;
+using Solution.PIS.Web.Helper.DataAnnotation.Notification;
+using Solution.PIS.Web.ModelBinder;
+using Solution.PIS.Web.Models.Search;
+using Solution.PIS.ServiceLayer.Service;
+
+namespace Solution.PIS.Web.Areas.MasterParameter.Controllers
+{   
+    [AutoMap(typeof(@(Model.Name)), typeof(@(Model.Name)Model))]
+    public class @(Model.Name)Controller : Controller, IHaveNotificationItem
+    {
+        public IServiceTemplate<@(Model.Name)> @(Model.Name)Service { get; set; }     
+
+        public @(Model.Name)Controller()
+        {
+            @(Model.Name)Service = new ServiceTemplate<@(Model.Name)>();
+        }
+        //
+        // GET: /MasterParameter/Zone/
+
+        [ActionIndexGet]
+        public ActionResult Index([ModelBinder(
+            typeof(SearchModelBinder<@(Model.Name)Model, @(Model.Name)>))] 
+            SearchModel<@(Model.Name)Model, @(Model.Name)> search)
+        {
+            var @(Model.Name) = @(Model.Name)Service.GetAll("from @(Model.Name)").ToList();              
+            var @(Model.Name)Model = Mapper.Map<IList<@(Model.Name)>, IList<@(Model.Name)Model>>(@(Model.Name)).ToList();
+            ViewData["__List"] = @(Model.Name)Model;
+            return View();
+        }
+        
+        //
+        // GET: /MasterParameter/Zone/Details/5
+        [ActionDetailsGet]
+        public ActionResult Details(int id)
+        {
+            return View();
+        }
+
+        //
+        // GET: /MasterParameter/Zone/Create
+        [ActionAddGet]
+        public ActionResult Create()
+        {
+            return View();
+        }
+
+        //
+        // POST: /MasterParameter/Zone/Create
+
+        [HttpPost]
+        public ActionResult Create(@(Model.Name)Model model)
+        {
+            //TODO::
+            var @(Model.Name) = Mapper.Map<@(Model.Name)Model, @(Model.Name)>(model);            
+            @(Model.Name)Service.Add(@(Model.Name));
+            this.EnableAddNotification();
+           return RedirectToAction("Index");
+        }
+
+        //
+        // GET: /MasterParameter/Zone/Edit/5
+        [ActionUpdateGet]        
+        public ActionResult Edit(string id)
+        {
+            return Get@(Model.Name)View(id.ToInt());
+        }
+
+        //
+        // POST: /MasterParameter/Zone/Edit/5
+
+        [HttpPost]      
+        public ActionResult Edit(@(Model.Name)Model model)
+        {
+            var @(Model.Name) = Mapper.Map<@(Model.Name)Model, @(Model.Name)>(model);
+            @(Model.Name)Service.Update(@(Model.Name));
+            this.EnableUpdateNotification();
+            return RedirectToAction("Index");
+        }
+
+        //
+        // GET: /MasterParameter/Zone/Delete/5
+
+        [ActionDeleteGet]
+        public ActionResult Delete(int id)
+        {
+            return Get@(Model.Name)View(id);
+        }
+
+        //
+        // POST: /MasterParameter/@(Model.Name)/Delete/5
+
+        [HttpPost]        
+        public ActionResult Delete(@(Model.Name)Model model)
+        {
+            var @(Model.Name) = Mapper.Map<@(Model.Name)Model, @(Model.Name)>(model);
+            @(Model.Name)Service.Delete(@(Model.Name));
+            this.EnableDeleteNotification();
+            return RedirectToAction("Index");
+        }
+
+        private ActionResult Get@(Model.Name)View(int id)
+        {
+            var @(Model.Name) = @(Model.Name)Service.GetById(id);
+            return View(@(Model.Name));
+        }
+
+        public string ItemName
+        {
+            get { return "@(Model.Name)"; }
+        }
+    }
+}

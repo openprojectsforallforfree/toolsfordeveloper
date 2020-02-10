@@ -1,0 +1,30 @@
+##filename= Create.cshtml
+$$using Solution.PIS.Web.App_GlobalResources
+$$using Solution.PIS.Web.Helper
+$$model Solution.PIS.Web.Areas.MasterParameter.Models.@(Model.Name)Model
+
+$${
+    ViewBag.Title = "Create @(Model.Name)";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h2>$$Resources.add_new</h2>
+<hr/>
+<div class="pis-form-wrapper">
+    $$using (Html.BeginForm("Create", "@(Model.Name)"))
+    {
+        $$Html.ValidationSummary(true)
+
+        <fieldset>
+            <legend>Create new @(Model.Name)</legend>
+            $$Html.EditorForModel()
+            <p>
+                $$Html.FormCreateButton()
+                $$Html.CancelButton()
+            </p>
+
+            $$Html.HiddenForHandlePostError()
+        </fieldset>
+    }
+</div>

@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AllTables xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DataBaseName>resto</DataBaseName>
+  <Tables>
+    <Table>
+      <Name>Company</Name>
+      <Owner>master</Owner>
+      <PrimaryKey>
+        <Type>PrimaryKey</Type>
+        <Columns>
+          <Column>
+            <Name>id</Name>
+            <IsPrimaryKey>true</IsPrimaryKey>
+            <IsForeignKey>false</IsForeignKey>
+            <IsUnique>true</IsUnique>
+            <IsIdentity>false</IsIdentity>
+            <DataType>Integer</DataType>
+            <DataLength>8</DataLength>
+            <MappedDataType>System.Int32</MappedDataType>
+            <IsNullable>false</IsNullable>
+            <DataPrecision xsi:nil="true" />
+            <DataScale xsi:nil="true" />
+          </Column>
+        </Columns>
+        <IsGeneratedBySequence>false</IsGeneratedBySequence>
+        <IsSelfReferencing>false</IsSelfReferencing>
+      </PrimaryKey>
+      <ForeignKeys />
+      <Columns>
+        <Column>
+          <Name>id</Name>
+          <IsPrimaryKey>true</IsPrimaryKey>
+          <IsForeignKey>false</IsForeignKey>
+          <IsUnique>true</IsUnique>
+          <IsIdentity>false</IsIdentity>
+          <DataType>Integer</DataType>
+          <DataLength>8</DataLength>
+          <MappedDataType>System.Int32</MappedDataType>
+          <IsNullable>false</IsNullable>
+          <DataPrecision xsi:nil="true" />
+          <DataScale xsi:nil="true" />
+        </Column>
+        <Column>
+          <Name>Name</Name>
+          <IsPrimaryKey>false</IsPrimaryKey>
+          <IsForeignKey>false</IsForeignKey>
+          <IsUnique>false</IsUnique>
+          <IsIdentity>false</IsIdentity>
+          <DataType>varchar</DataType>
+          <DataLength>15</DataLength>
+          <MappedDataType>System.String</MappedDataType>
+          <IsNullable>true</IsNullable>
+          <DataPrecision xsi:nil="true" />
+          <DataScale xsi:nil="true" />
+        </Column>
+        <Column>
+          <Name>Intersting</Name>
+          <IsPrimaryKey>false</IsPrimaryKey>
+          <IsForeignKey>false</IsForeignKey>
+          <IsUnique>false</IsUnique>
+          <IsIdentity>false</IsIdentity>
+          <DataType>varchar</DataType>
+          <DataLength>1</DataLength>
+          <MappedDataType>System.String</MappedDataType>
+          <IsNullable>true</IsNullable>
+          <DataPrecision xsi:nil="true" />
+          <DataScale xsi:nil="true" />
+        </Column>
+        <Column>
+          <Name>Description</Name>
+          <IsPrimaryKey>false</IsPrimaryKey>
+          <IsForeignKey>false</IsForeignKey>
+          <IsUnique>false</IsUnique>
+          <IsIdentity>false</IsIdentity>
+          <DataType>varchar</DataType>
+          <DataLength>15</DataLength>
+          <MappedDataType>System.String</MappedDataType>
+          <IsNullable>true</IsNullable>
+          <DataPrecision xsi:nil="true" />
+          <DataScale xsi:nil="true" />
+        </Column>
+      </Columns>
+      <HasManyRelationships />
+    </Table>
+    <Table>
+      <Name>trade</Name>
+      <Owner>master</Owner>
+      <PrimaryKey>
+        <Type>PrimaryKey</Type>
+        <Columns>
+          <Column>
+            <Name>id</Name>
+            <IsPrimaryKey>true</IsPrimaryKey>
+            <IsForeignKey>false</IsForeignKey>
+            <IsUnique>true</IsUnique>
+            <IsIdentity>false</IsIdentity>
+            <DataType>Integer</DataType>
+            <DataLength>8</DataLength>
+            <MappedDataType>System.Int32</MappedDataType>
+            <IsNullable>false</IsNullable>
+            <DataPrecision xsi:nil="true" />
+            <DataScale xsi:nil="true" />
+          </Column>
+        </Columns>
+        <IsGeneratedBySequence>false</IsGeneratedBySequence>
+        <IsSelfReferencing>false</IsSelfReferencing>
+      </PrimaryKey>
+      <ForeignKeys />
+      <Columns>
+        <Column>
+          <Name>id</Name>
+          <IsPrimaryKey>true</IsPrimaryKey>
+          <IsForeignKey>false</IsForeignKey>
+          <IsUnique>true</IsUnique>
+          <IsIdentity>false</IsIdentity>
+          <DataType>Integer</DataType>
+          <DataLength>8</DataLength>
+          <MappedDataType>System.Int32</MappedDataType>
+          <IsNullable>false</IsNullable>
+          <DataPrecision xsi:nil="true" />
+          <DataScale xsi:nil="true" />
+        </Column>
+        <Column>
+          <Name>companyid</Name>
+          <IsPrimaryKey>false</IsPrimaryKey>
+          <IsForeignKey>false</IsForeignKey>
+          <IsUnique>false</IsUnique>
+          <IsIdentity>false</IsIdentity>
+          <DataType>Integer</DataType>
+          <DataLength>8</DataLength>
+          <MappedDataType>System.Int32</MappedDataType>
+          <IsNullable>true</IsNullable>
+          <DataPrecision xsi:nil="true" />
+          <DataScale xsi:nil="true" />
+        </Column>
+        <Column>
+          <Name>Ntransaction</Name>
+          <IsPrimaryKey>false</IsPrimaryKey>
+          <IsForeignKey>false</IsForeignKey>
+          <IsUnique>false</IsUnique>
+          <IsIdentity>false</IsIdentity>
+          <DataType>Integer</DataType>
+          <DataLength>8</DataLength>
+          <MappedDataType>System.Int32</MappedDataType>
+          <IsNullable>true</IsNullable>
+          <DataPrecision xsi:nil="true" />
+          <DataScale xsi:nil="true" />
+        </Column>
+        <Column>
+          <Name>AMaxPrice</Name>
+          <IsPrimaryKey>false</IsPrimaryKey>
+          <IsForeignKey>false</IsForeignKey>
+          <IsUnique>false</IsUnique>
+          <IsIdentity>false</IsIdentity>
+          <DataType>Decimal</DataType>
+          <DataLength>8</DataLength>
+          <MappedDataType>System.Decimal</MappedDataType>
+          <IsNullable>true</IsNullable>
+          <DataPrecision xsi:nil="true" />
+          <DataScale xsi:nil="true" />
+        </Column>
+        <Column>
+          <Name>AMinPrice</Name>
+          <IsPrimaryKey>false</IsPrimaryKey>
+          <IsForeignKey>false</IsForeignKey>
+          <IsUnique>false</IsUnique>
+          <IsIdentity>false</IsIdentity>
+          <DataType>Decimal</DataType>
+          <DataLength>8</DataLength>
+          <MappedDataType>System.Decimal</MappedDataType>
+          <IsNullable>true</IsNullable>
+          <DataPrecision xsi:nil="true" />
+          <DataScale xsi:nil="true" />
+        </Column>
+        <Column>
+          <Name>AClosingPrice</Name>
+          <IsPrimaryKey>false</IsPrimaryKey>
+          <IsForeignKey>false</IsForeignKey>
+          <IsUnique>false</IsUnique>
+          <IsIdentity>false</IsIdentity>
+          <DataType>Decimal</DataType>
+          <DataLength>8</DataLength>
+          <MappedDataType>System.Decimal</MappedDataType>
+          <IsNullable>true</IsNullable>
+          <DataPrecision xsi:nil="true" />
+          <DataScale xsi:nil="true" />
+        </Column>
+        <Column>
+          <Name>NNosTraded</Name>
+          <IsPrimaryKey>false</IsPrimaryKey>
+          <IsForeignKey>false</IsForeignKey>
+          <IsUnique>false</IsUnique>
+          <IsIdentity>false</IsIdentity>
+          <DataType>Decimal</DataType>
+          <DataLength>8</DataLength>
+          <MappedDataType>System.Decimal</MappedDataType>
+          <IsNullable>true</IsNullable>
+          <DataPrecision xsi:nil="true" />
+          <DataScale xsi:nil="true" />
+        </Column>
+        <Column>
+          <Name>Aamount</Name>
+          <IsPrimaryKey>false</IsPrimaryKey>
+          <IsForeignKey>false</IsForeignKey>
+          <IsUnique>false</IsUnique>
+          <IsIdentity>false</IsIdentity>
+          <DataType>Decimal</DataType>
+          <DataLength>8</DataLength>
+          <MappedDataType>System.Decimal</MappedDataType>
+          <IsNullable>true</IsNullable>
+          <DataPrecision xsi:nil="true" />
+          <DataScale xsi:nil="true" />
+        </Column>
+        <Column>
+          <Name>APreviousClosing</Name>
+          <IsPrimaryKey>false</IsPrimaryKey>
+          <IsForeignKey>false</IsForeignKey>
+          <IsUnique>false</IsUnique>
+          <IsIdentity>false</IsIdentity>
+          <DataType>Decimal</DataType>
+          <DataLength>8</DataLength>
+          <MappedDataType>System.Decimal</MappedDataType>
+          <IsNullable>true</IsNullable>
+          <DataPrecision xsi:nil="true" />
+          <DataScale xsi:nil="true" />
+        </Column>
+        <Column>
+          <Name>Date</Name>
+          <IsPrimaryKey>false</IsPrimaryKey>
+          <IsForeignKey>false</IsForeignKey>
+          <IsUnique>false</IsUnique>
+          <IsIdentity>false</IsIdentity>
+          <DataType>Date</DataType>
+          <DataLength>8</DataLength>
+          <MappedDataType>System.DateTime</MappedDataType>
+          <IsNullable>true</IsNullable>
+          <DataPrecision xsi:nil="true" />
+          <DataScale xsi:nil="true" />
+        </Column>
+      </Columns>
+      <HasManyRelationships />
+    </Table>
+    <Table>
+      <Name>CompanyGroup</Name>
+      <Owner>master</Owner>
+      <PrimaryKey>
+        <Type>PrimaryKey</Type>
+        <Columns>
+          <Column>
+            <Name>id</Name>
+            <IsPrimaryKey>true</IsPrimaryKey>
+            <IsForeignKey>false</IsForeignKey>
+            <IsUnique>true</IsUnique>
+            <IsIdentity>false</IsIdentity>
+            <DataType>Integer</DataType>
+            <DataLength>8</DataLength>
+            <MappedDataType>System.Int32</MappedDataType>
+            <IsNullable>false</IsNullable>
+            <DataPrecision xsi:nil="true" />
+            <DataScale xsi:nil="true" />
+          </Column>
+        </Columns>
+        <IsGeneratedBySequence>false</IsGeneratedBySequence>
+        <IsSelfReferencing>false</IsSelfReferencing>
+      </PrimaryKey>
+      <ForeignKeys />
+      <Columns>
+        <Column>
+          <Name>id</Name>
+          <IsPrimaryKey>true</IsPrimaryKey>
+          <IsForeignKey>false</IsForeignKey>
+          <IsUnique>true</IsUnique>
+          <IsIdentity>false</IsIdentity>
+          <DataType>Integer</DataType>
+          <DataLength>8</DataLength>
+          <MappedDataType>System.Int32</MappedDataType>
+          <IsNullable>false</IsNullable>
+          <DataPrecision xsi:nil="true" />
+          <DataScale xsi:nil="true" />
+        </Column>
+        <Column>
+          <Name>Name</Name>
+          <IsPrimaryKey>false</IsPrimaryKey>
+          <IsForeignKey>false</IsForeignKey>
+          <IsUnique>false</IsUnique>
+          <IsIdentity>false</IsIdentity>
+          <DataType>varchar</DataType>
+          <DataLength>50</DataLength>
+          <MappedDataType>System.String</MappedDataType>
+          <IsNullable>true</IsNullable>
+          <DataPrecision xsi:nil="true" />
+          <DataScale xsi:nil="true" />
+        </Column>
+        <Column>
+          <Name>Details</Name>
+          <IsPrimaryKey>false</IsPrimaryKey>
+          <IsForeignKey>false</IsForeignKey>
+          <IsUnique>false</IsUnique>
+          <IsIdentity>false</IsIdentity>
+          <DataType>varchar</DataType>
+          <DataLength>150</DataLength>
+          <MappedDataType>System.String</MappedDataType>
+          <IsNullable>true</IsNullable>
+          <DataPrecision xsi:nil="true" />
+          <DataScale xsi:nil="true" />
+        </Column>
+      </Columns>
+      <HasManyRelationships />
+    </Table>
+    <Table>
+      <Name>Company_CompanyGroup</Name>
+      <Owner>master</Owner>
+      <PrimaryKey>
+        <Type>PrimaryKey</Type>
+        <Columns>
+          <Column>
+            <Name>id</Name>
+            <IsPrimaryKey>true</IsPrimaryKey>
+            <IsForeignKey>false</IsForeignKey>
+            <IsUnique>true</IsUnique>
+            <IsIdentity>false</IsIdentity>
+            <DataType>Integer</DataType>
+            <DataLength>8</DataLength>
+            <MappedDataType>System.Int32</MappedDataType>
+            <IsNullable>false</IsNullable>
+            <DataPrecision xsi:nil="true" />
+            <DataScale xsi:nil="true" />
+          </Column>
+        </Columns>
+        <IsGeneratedBySequence>false</IsGeneratedBySequence>
+        <IsSelfReferencing>false</IsSelfReferencing>
+      </PrimaryKey>
+      <ForeignKeys />
+      <Columns>
+        <Column>
+          <Name>id</Name>
+          <IsPrimaryKey>true</IsPrimaryKey>
+          <IsForeignKey>false</IsForeignKey>
+          <IsUnique>true</IsUnique>
+          <IsIdentity>false</IsIdentity>
+          <DataType>Integer</DataType>
+          <DataLength>8</DataLength>
+          <MappedDataType>System.Int32</MappedDataType>
+          <IsNullable>false</IsNullable>
+          <DataPrecision xsi:nil="true" />
+          <DataScale xsi:nil="true" />
+        </Column>
+        <Column>
+          <Name>CompanyGroupId</Name>
+          <IsPrimaryKey>false</IsPrimaryKey>
+          <IsForeignKey>false</IsForeignKey>
+          <IsUnique>false</IsUnique>
+          <IsIdentity>false</IsIdentity>
+          <DataType>Integer</DataType>
+          <DataLength>8</DataLength>
+          <MappedDataType>System.Int32</MappedDataType>
+          <IsNullable>true</IsNullable>
+          <DataPrecision xsi:nil="true" />
+          <DataScale xsi:nil="true" />
+        </Column>
+        <Column>
+          <Name>CompanyId</Name>
+          <IsPrimaryKey>false</IsPrimaryKey>
+          <IsForeignKey>false</IsForeignKey>
+          <IsUnique>false</IsUnique>
+          <IsIdentity>false</IsIdentity>
+          <DataType>Integer</DataType>
+          <DataLength>8</DataLength>
+          <MappedDataType>System.Int32</MappedDataType>
+          <IsNullable>true</IsNullable>
+          <DataPrecision xsi:nil="true" />
+          <DataScale xsi:nil="true" />
+        </Column>
+      </Columns>
+      <HasManyRelationships />
+    </Table>
+  </Tables>
+</AllTables>

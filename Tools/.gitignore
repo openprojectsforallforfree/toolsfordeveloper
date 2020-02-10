@@ -1,0 +1,6 @@
+# Comments
+**/bin
+**/obj
+*.suo
+**/packages
+**/build
